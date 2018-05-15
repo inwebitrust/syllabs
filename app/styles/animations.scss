@@ -1,0 +1,56 @@
+@import 'mixins/global';
+
+
+@keyframes highlight {
+  0%   { 
+    -webkit-box-shadow: 0 0 0 0px #A6A196;
+    box-shadow: 0 0 0 0px #A6A196; }
+  50% { 
+    -webkit-box-shadow: 0 0 0 10px #A6A196;
+    box-shadow: 0 0 0 10px #A6A196; }
+  100% { 
+    -webkit-box-shadow: 0 0 0 0px #A6A196;
+    box-shadow: 0 0 0 0px #A6A196; }
+}
+
+@-webkit-keyframes rotating
+    {
+    from
+        {
+        transform: translate(-50%, -50%) rotate(0deg);
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        }
+    to
+        {
+        transform: translate(-50%, -50%) rotate(360deg);
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        }
+}
+
+@keyframes rotating
+    {
+    from
+        {
+            -ms-transform: translate(-50%, -50%) rotate(0deg);
+            -moz-transform: translate(-50%, -50%) rotate(0deg);
+            -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+        
+        }
+    to
+        {
+        transform: translate(-50%, -50%) rotate(360deg);
+        -ms-transform: translate(-50%, -50%) rotate(360deg);
+        -moz-transform: translate(-50%, -50%) rotate(360deg);
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        }
+}
+
+.rotating
+    {
+    -webkit-animation: rotating 1s linear infinite;
+    -moz-animation: rotating 1s linear infinite;
+    -ms-animation: rotating 1s linear infinite;
+    -o-animation: rotating 1s linear infinite;
+    animation: rotating 1s linear infinite;
+    }

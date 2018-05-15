@@ -1,0 +1,48 @@
+.syllabsgraph_highcharts{
+	width:674px;
+	height:476px;
+	display:inline-block;
+}
+
+/* TOOLTIP */
+
+.highcharts-tooltip{
+	text-align:center;
+}
+.syllabs_tooltip_div{
+	display:inline;
+}
+
+.syllabs_tooltip_div .syllabs_tooltip_value{
+	font-family:"LatoWebBlack";
+}
+
+
+/* LEGEND */
+
+.syllabs_stackedbar_legend{
+	margin-top:-2px;
+}
+
+.syllabs_pyramid_legend{
+	margin-top:-2px;
+}
+
+.syllabs_timeseries_legend{
+	
+}
+
+/* GAUGES */
+.syllabsgraph_gauge{
+	width:500px;
+	height:300px;
+	display:block;
+	position:relative;
+	left:50%;
+	transform:translate(-50%, 0);
+}
+
+#highcharts-gauge2{
+	position:relative;
+	top:-50px;
+}

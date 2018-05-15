@@ -1,0 +1,65 @@
+@mixin takeallspace() {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin toback($zindex:-1){
+	opacity: 0;
+	z-index: $zindex;
+}
+
+@mixin tofront($zindex:1){
+	opacity: 1;
+	z-index: $zindex;
+}
+
+@mixin tocenter(){
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	@include transform(translate(-50%,-50%));
+}
+
+@mixin bgsize($width, $height){
+	background-size: $width $height;
+	width: $width;
+	height: $height;
+}
+
+@mixin bgbutton($height, $fontsize, $textcolor, $topcolor, $bottomcolor){
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    height: $height;
+    border-radius: $height;
+    padding: 0 20px;
+    line-height: ($height+1);
+    color: $textcolor;
+    font-size: $fontsize;
+    font-family: "exo_2bold";
+    /*@include bg-gradient-vertical(#ffffff, #d0f4fb);*/
+    background: $bottomcolor;
+    overflow: hidden;
+
+    &:before{
+      position: absolute;
+      content: "";
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 50%;
+      background: $topcolor;
+      border-radius: $height $height 0 0;
+      @include transition((height), 0.3s, ease-out, 0s);
+    }
+
+    &:hover{
+      text-decoration: none;
+      &:before{
+        height: 0%;
+      }
+    }
+}

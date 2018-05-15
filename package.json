@@ -1,0 +1,13 @@
+{
+  "name": "simple-brunch",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "brunch": "^2.10.12",
+    "javascript-brunch": "^2.10.0",
+    "sass-brunch": "^2.10.4"
+  },
+  "dependencies": {
+    "browser-sync-brunch": "0.0.9"
+  }
+}

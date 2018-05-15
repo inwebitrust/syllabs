@@ -1,0 +1,147 @@
+@import 'mixins/global';
+
+html, body{
+	font-family:"amikoregular";
+	font-size:13px;
+	line-height:16px;
+	background:#fff;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	width:100%;
+	color:$colorText;
+	height:100%;
+	font-family: 'Rubik', sans-serif;
+}
+
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+
+#App{
+	background:#fff;
+	width:100%;
+	#AppGraphs{
+		width:100%;
+		.syllabsgraph_container{
+			width:100%;
+			margin:0 0 60px;
+			padding:20px 0;
+			border-bottom:1px solid #ccc;
+			position:relative;
+			background:#e6ebf0;
+			.palette_picker{
+				position:absolute;
+				right:10px;
+				top:10px;
+				.palette_pick{
+					display:inline-block;
+					vertical-align:top;
+					margin:0 5px;
+					border-radius:20px;
+					width:20px;
+					height:20px;
+					position:relative;
+					opacity:.2;
+					cursor:pointer;
+					z-index:10;
+					&:before{
+						content:"";
+						position:absolute;
+						left:0px;
+						top:0px;
+						width:50%;
+						height:100%;
+						border-radius:20px 0 0 20px;
+					}
+					&:after{
+						content:"";
+						position:absolute;
+						right:0px;
+						top:0px;
+						width:50%;
+						height:100%;
+						border-radius:0px 20px 20px 0px;
+					}
+					&[data-palette="1"]{
+						&:before{
+							background:#547a98,
+						}
+						&:after{
+							background:#81beec;
+						}
+					}
+					&[data-palette="2"]{
+						&:before{
+							background:#498f60,
+						}
+						&:after{
+							background:#dbd942;
+						}
+					}
+					&[data-palette="3"]{
+						&:before{
+							background:#b82e10,
+						}
+						&:after{
+							background:#ff6238;
+						}
+					}
+					&.selected{
+						opacity:1;
+					}
+				}
+			}
+			.container_mask{
+				display:none;
+				background:rgba(0,0,0,0.8);
+				width:100%;
+				height:100%;
+				position:absolute;
+				left:0px;
+				top:0px;
+				cursor:pointer;
+				z-index:1000;
+				&.displayed{
+					display:block;
+				}
+			}
+			.syllabsgraph_wrapper{
+				width:100%;
+				display:inline-block;
+				position:relative;
+				text-align:center;
+				.syllabsgraph_name{
+					font-size:20px;
+					margin:0 0 20px;
+				}
+			}
+			.syllabsgraph_actions{
+				width:100%;
+				text-align:center;
+				margin-top:20px;
+				.seecode_bt{
+					display:inline-block;
+					vertical-align:top;
+					cursor:pointer;
+				}
+			}
+			.seecode_modal{
+				position:absolute;
+				left:50%;
+				top:50%;
+				@include transform(translate(-50%, -50%));
+				width:600px;
+				height:450px;
+				overflow:auto;
+				display:none;
+				z-index:20000;
+				&.displayed{
+					display:block;
+				}
+			}
+		}
+	}
+}

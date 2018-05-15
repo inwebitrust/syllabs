@@ -1,0 +1,18 @@
+@import 'browsers';
+@import 'helpers';
+
+$colorText:#222;
+$colorBg:#fff;
+$colorSelect:#8CD867;
+$colorBorder:#222;
+
+$colorRed:#F13501;
+$colorPurple:#774DAB;
+$colorBlue:#0992F9;
+$colorPink:#E4095C;
+
+
+.button_text{
+    position: relative;
+    z-index: 1;
+}
